@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="55edcdfd-340c-431e-ad97-b0e7481c4102" name="Changes" comment="init 2">
-      <change afterPath="$PROJECT_DIR$/src/GameLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Memory.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Memory.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Memory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Memory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MemoryGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MemoryGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pictures/Download (1).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/pictures/Download(1).jpg" afterDir="false" />
-    </list>
+    <list default="true" id="55edcdfd-340c-431e-ad97-b0e7481c4102" name="Changes" comment="commit #1" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -76,7 +66,7 @@
       <updated>1652127534680</updated>
       <workItem from="1652127536250" duration="4334000" />
       <workItem from="1652132919674" duration="671000" />
-      <workItem from="1652133606975" duration="1639000" />
+      <workItem from="1652133606975" duration="2367000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1652127867717</created>
@@ -99,7 +89,21 @@
       <option name="project" value="LOCAL" />
       <updated>1652128433479</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add GameLogic">
+      <created>1652135533719</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1652135533719</updated>
+    </task>
+    <task id="LOCAL-00005" summary="commit #1">
+      <created>1652135968552</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1652135968552</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -120,6 +124,8 @@
     <MESSAGE value="init" />
     <MESSAGE value="add main method" />
     <MESSAGE value="init 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="init 2" />
+    <MESSAGE value="add GameLogic" />
+    <MESSAGE value="commit #1" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit #1" />
   </component>
 </project>
