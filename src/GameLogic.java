@@ -36,7 +36,6 @@ public class GameLogic
 	}
 
 	public boolean move(int first, int second){
-
 		if (playground[first] == playground[second]){
 				return true;
 		} else {
