@@ -1,4 +1,5 @@
-import javax.swing.*;
+package memory;
+
 import java.io.IOException;
 
 public class Memory {
