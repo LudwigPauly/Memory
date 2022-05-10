@@ -10,7 +10,7 @@ import java.util.Properties;
 public class Memory {
 
     protected int gridsize;
-    protected double timeLimit;
+    protected int timeLimit;
     protected int timerDelay;
 
     public Memory(){
@@ -19,12 +19,9 @@ public class Memory {
         GameLogic gameLogic = new GameLogic(gridsize);
         gameLogic.init();
 
-        MainGUI mainGUI = new MainGUI(gridsize,gameLogic,timerDelay);
+        MainGUI mainGUI = new MainGUI(gridsize,gameLogic,timerDelay,timeLimit);
     }
 
-    public void init(){
-
-    }
 
     public static void main(String[]args) throws IOException {
 
@@ -36,7 +33,7 @@ public class Memory {
             Properties prop = new Properties();
             prop.load(input);
 
-            timeLimit = Double.parseDouble(prop.getProperty("TIME_LIMIT"));
+            timeLimit = Integer.parseInt(prop.getProperty("TIME_LIMIT"));
             gridsize = Integer.parseInt(prop.getProperty("GRID_SIZE"));
             timerDelay = Integer.parseInt(prop.getProperty("TIMER_DELAY"));
 

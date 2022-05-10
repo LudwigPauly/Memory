@@ -22,12 +22,19 @@ public class MainGUI {
     protected int async2;
     protected Icon[] icons;
 
-    public MainGUI(int gridsize, GameLogic gameLogic, int timerDelay) {
+    protected int wrongMoves;
+    protected int moves;
+    protected int timeLimit;
+
+    public MainGUI(int gridsize, GameLogic gameLogic, int timerDelay,int timeLimit) {
         this.gridsize = gridsize;
         this.gameLogic = gameLogic;
         this.first = -1;
         this.icons = new Icon[(gridsize * gridsize) / 2];
         this.timerDelay = timerDelay;
+        this.wrongMoves = 0;
+        this.moves = 0;
+        this.timeLimit = timeLimit;
 
         readInIcons();
 
@@ -54,6 +61,18 @@ public class MainGUI {
             }
         }
         mainPanel.revalidate();
+
+
+        Timer timer2 = new Timer(timeLimit*1000, new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                for (int i=0;i<buttons.length;i++){
+                    buttons[i].setEnabled(false);
+                }
+            }
+        });
+        timer2.setRepeats(false);
+        timer2.start();
     }
 
     public void showIcons(int index1, int index2) {
@@ -77,15 +96,6 @@ public class MainGUI {
         }
     }
 
-    public void delay(int s) {
-        long currentTime = System.currentTimeMillis();
-        long endTime = currentTime + s * 1000;
-        while (currentTime < endTime) {
-            currentTime = System.currentTimeMillis();
-        }
-        ;
-    }
-
 
     class ButtonListener implements java.awt.event.ActionListener {
         public void actionPerformed(java.awt.event.ActionEvent e) {
@@ -97,6 +107,7 @@ public class MainGUI {
                         first = i;
                         async1 =first;
                     } else if (first != i) {
+                        moves++;
                         async2 =i;
                         showIcons(first,i);
 
@@ -105,6 +116,7 @@ public class MainGUI {
                             buttons[first].setEnabled(false);
                             buttons[i].setEnabled(false);
                         } else {
+                            wrongMoves++;
                             System.out.println("False");
                             Timer timer = new Timer(timerDelay, new ActionListener() {
                                 @Override

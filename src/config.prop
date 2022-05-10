@@ -1,6 +1,8 @@
 # Timelimit is s
-TIME_LIMIT=100
+TIME_LIMIT=60
+
 #Grid <= 8
 GRID_SIZE=4
 
+#how long the cards shown after wrong move
 TIMER_DELAY=1000
