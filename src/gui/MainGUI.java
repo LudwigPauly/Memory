@@ -48,7 +48,7 @@ public class MainGUI {
 
         for (int i = 0; i < gridsize; i++) {
             for (int k = 0; k < gridsize; k++) {
-                buttons[gridsize * i + k] = new JButton(String.valueOf(gridsize * i + k));
+                buttons[gridsize * i + k] = new JButton("");
                 buttons[gridsize * i + k].addActionListener(buttonListener);
                 mainPanel.add(buttons[gridsize * i + k]);
             }
@@ -121,8 +121,6 @@ public class MainGUI {
                 }
             }
             if (gameLogic.checkForWin()) System.out.println("win!!!!!!!!!!!!!!");
-
-
         }
     }
 
