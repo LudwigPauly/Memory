@@ -5,10 +5,12 @@ import java.util.Random;
 public class GameLogic
 {
 	protected int[] playground;
+	protected boolean[] hits;
 
 	public GameLogic(int gridsize)
 	{
 		this.playground = new int[gridsize*gridsize];
+		hits = new boolean[gridsize*gridsize];
 	}
 
 	public void init(){
@@ -17,6 +19,9 @@ public class GameLogic
 			playground[i]=i;
 			playground[i+playgroundSize/2] = i;
 		}
+
+
+		for (int i=0;i<playgroundSize;i++) hits[i] = false;
 
 		for (int i=0;i<playgroundSize;i++) System.out.print(playground[i]);
 
@@ -39,9 +44,19 @@ public class GameLogic
 
 	public boolean move(int first, int second){
 		if (playground[first] == playground[second]){
-				return true;
-		} else {
-			return false;
+			hits[first] = true;
+			hits[second]= true;
+			return true;
 		}
+		return false;
+	}
+
+	public boolean checkForWin(){
+		int i = 0;
+		while (hits[i]){
+			if(i== hits.length-1) return true;
+			i++;
+		}
+		return false;
 	}
 }
