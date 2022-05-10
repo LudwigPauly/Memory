@@ -11,6 +11,7 @@ public class Memory {
 
     protected int gridsize;
     protected double timeLimit;
+    protected int timerDelay;
 
     public Memory(){
         readProperties();
@@ -18,7 +19,7 @@ public class Memory {
         GameLogic gameLogic = new GameLogic(gridsize);
         gameLogic.init();
 
-        MainGUI mainGUI = new MainGUI(gridsize,gameLogic);
+        MainGUI mainGUI = new MainGUI(gridsize,gameLogic,timerDelay);
     }
 
     public void init(){
@@ -36,7 +37,8 @@ public class Memory {
             prop.load(input);
 
             timeLimit = Double.parseDouble(prop.getProperty("TIME_LIMIT"));
-            gridsize = Integer.parseInt(prop.getProperty("GRIDSIZE"));
+            gridsize = Integer.parseInt(prop.getProperty("GRID_SIZE"));
+            timerDelay = Integer.parseInt(prop.getProperty("TIMER_DELAY"));
 
         } catch (IOException ex) {
             ex.printStackTrace();

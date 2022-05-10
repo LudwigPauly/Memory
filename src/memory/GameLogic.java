@@ -59,4 +59,8 @@ public class GameLogic
 		}
 		return false;
 	}
+
+	public int getCardValue(int index){
+		return playground[index];
+	}
 }
