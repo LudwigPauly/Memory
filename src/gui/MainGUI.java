@@ -1,5 +1,6 @@
 package gui;
 
+import memory.Exporter;
 import memory.GameLogic;
 
 import javax.swing.*;
@@ -26,6 +27,9 @@ public class MainGUI {
     protected int moves;
     protected int timeLimit;
 
+    protected Exporter exporter;
+
+
     public MainGUI(int gridsize, GameLogic gameLogic, int timerDelay,int timeLimit) {
         this.gridsize = gridsize;
         this.gameLogic = gameLogic;
@@ -37,6 +41,8 @@ public class MainGUI {
         this.timeLimit = timeLimit;
 
         readInIcons();
+
+        this.exporter = new Exporter();
 
         mainFrame = new JFrame();
         mainFrame.setSize(1000, 1000);
@@ -66,9 +72,7 @@ public class MainGUI {
         Timer timer2 = new Timer(timeLimit*1000, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                for (int i=0;i<buttons.length;i++){
-                    buttons[i].setEnabled(false);
-                }
+                endGame(false);
             }
         });
         timer2.setRepeats(false);
@@ -84,40 +88,61 @@ public class MainGUI {
     public void hideIcons(int index1, int index2) {
         buttons[index1].setIcon(null);
         buttons[index2].setIcon(null);
-
+        unlockAll();
     }
 
     public void readInIcons() {
         for (int i = 0; i < (gridsize * gridsize) / 2; i++) {
-            File file = new File("C:\\Users\\ludwi\\IdeaProjects\\Memory\\src\\pictures\\icon" + (i + 1) + ".jpg");
+            File file = new File("/home/user/Documents/Memory/src/pictures/icon" + (i + 1) + ".jpg");
             if (file.exists()) {
                 icons[i] = new ImageIcon(file.getAbsolutePath());
             }
         }
     }
 
+    public void  lockAll(){
+        for (int i=0;i<buttons.length;i++){
+            buttons[i].setEnabled(false);
+        }
+    }
+    public void  unlockAll(){
+        for (int i=0;i<buttons.length;i++){
+            buttons[i].setEnabled(true);
+        }
+    }
+
+    public void endGame(boolean win){
+        for (int i=0;i<buttons.length;i++){
+            buttons[i].setEnabled(false);
+        }
+        exporter.writeToFile(timeLimit,moves,wrongMoves,gridsize,win);
+        System.exit(0);
+    }
 
     class ButtonListener implements java.awt.event.ActionListener {
         public void actionPerformed(java.awt.event.ActionEvent e) {
 
             for (int i = 0; i < gridsize * gridsize; i++) {
                 if (buttons[i].equals(e.getSource())) {
-                    System.out.println("JButton " + i + " wurde geklickt.");
+                    //System.out.println("JButton " + i + " wurde geklickt.");
                     if (first == -1) {
                         first = i;
-                        async1 =first;
                     } else if (first != i) {
                         moves++;
+                        //while (lock) System.out.println("locked");
                         async2 =i;
+                        async1 =first;
                         showIcons(first,i);
 
                         if (gameLogic.move(first, i)) {
-                            System.out.println("True");
+                            //System.out.println("True");
                             buttons[first].setEnabled(false);
                             buttons[i].setEnabled(false);
                         } else {
                             wrongMoves++;
-                            System.out.println("False");
+                            //System.out.println("False");
+                            lockAll();
+
                             Timer timer = new Timer(timerDelay, new ActionListener() {
                                 @Override
                                 public void actionPerformed(ActionEvent e) {
@@ -132,8 +157,7 @@ public class MainGUI {
 
                 }
             }
-            if (gameLogic.checkForWin()) System.out.println("win!!!!!!!!!!!!!!");
+            if (gameLogic.checkForWin()) endGame(true);
         }
     }
-
 }

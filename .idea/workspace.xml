@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="55edcdfd-340c-431e-ad97-b0e7481c4102" name="Changes" comment="commit #5">
+    <list default="true" id="55edcdfd-340c-431e-ad97-b0e7481c4102" name="Changes" comment="commit #1.1">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/config.prop" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.prop" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/MainGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/MainGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/memory/Exporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/memory/Exporter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/memory/GameLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/memory/GameLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/memory/Memory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/memory/Memory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +80,9 @@
       <workItem from="1652174600461" duration="12504000" />
       <workItem from="1652201917482" duration="632000" />
       <workItem from="1652376267913" duration="545000" />
+      <workItem from="1652396331485" duration="7000" />
+      <workItem from="1652439476429" duration="1692000" />
+      <workItem from="1652446715983" duration="2392000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1652127867717</created>
@@ -157,7 +165,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>

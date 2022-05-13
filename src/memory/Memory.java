@@ -29,7 +29,7 @@ public class Memory {
     }
 
     public void readProperties(){
-        try (InputStream input = new FileInputStream("C:\\Users\\ludwi\\IdeaProjects\\Memory\\src\\config.prop")) {
+        try (InputStream input = new FileInputStream("/home/user/Documents/Memory/src/config.prop")) {
             Properties prop = new Properties();
             prop.load(input);
 

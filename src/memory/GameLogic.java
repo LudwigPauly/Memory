@@ -23,7 +23,7 @@ public class GameLogic
 
 		for (int i=0;i<playgroundSize;i++) hits[i] = false;
 
-		for (int i=0;i<playgroundSize;i++) System.out.print(playground[i]);
+		//for (int i=0;i<playgroundSize;i++) System.out.print(playground[i]);
 
 		int iterations = 40; //shuffle iterations
 
@@ -37,9 +37,9 @@ public class GameLogic
 			playground[acc2] = tmp;
 		}
 
-		System.out.print("\n");
+		//System.out.print("\n");
 
-		for (int i=0;i<playgroundSize;i++) System.out.print(playground[i]);
+		//for (int i=0;i<playgroundSize;i++) System.out.print(playground[i]);
 	}
 
 	public boolean move(int first, int second){
