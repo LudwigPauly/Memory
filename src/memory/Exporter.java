@@ -14,7 +14,7 @@ public class Exporter {
         int rightMoves = moves -wrongMoves;
 
         try {
-            File file = new File("/home/user/Documents/Memory/src/export.txt");
+            File file = new File(".\\src\\export.txt");
             if (file.createNewFile()) {
                 FileWriter fileWriter = new FileWriter(file, true);
                 createFileHeader(fileWriter);

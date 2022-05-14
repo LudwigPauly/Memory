@@ -93,7 +93,7 @@ public class MainGUI {
 
     public void readInIcons() {
         for (int i = 0; i < (gridsize * gridsize) / 2; i++) {
-            File file = new File("/home/user/Documents/Memory/src/pictures/icon" + (i + 1) + ".jpg");
+            File file = new File(".\\src\\pictures\\icon" + (i + 1) + ".jpg");
             if (file.exists()) {
                 icons[i] = new ImageIcon(file.getAbsolutePath());
             }
