@@ -6,3 +6,6 @@ GRID_SIZE=4
 
 # how long the cards shown after wrong move
 TIMER_DELAY=1000
+
+#GUI Size in px
+GUI_SIZE=800

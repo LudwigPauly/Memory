@@ -30,7 +30,7 @@ public class MainGUI {
     protected Exporter exporter;
 
 
-    public MainGUI(int gridsize, GameLogic gameLogic, int timerDelay,int timeLimit) {
+    public MainGUI(int gridsize, GameLogic gameLogic, int timerDelay,int timeLimit, int guiSize) {
         this.gridsize = gridsize;
         this.gameLogic = gameLogic;
         this.first = -1;
@@ -45,11 +45,11 @@ public class MainGUI {
         this.exporter = new Exporter();
 
         mainFrame = new JFrame();
-        mainFrame.setSize(1000, 1000);
+        mainFrame.setSize(guiSize, guiSize);
         mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         mainPanel = new JPanel();
         mainFrame.setContentPane(mainPanel);
-        mainPanel.setBounds(1000, 1000, 900, 900);
+        mainPanel.setBounds(guiSize, guiSize, guiSize, guiSize);
         mainPanel.setLayout(new GridLayout(gridsize, gridsize));
         mainPanel.setBackground(Color.green);
 
