@@ -1,17 +1,13 @@
 # memory.Memory
 
-## Specification:
++ Config File: src/
 
-  A software tool to play the game memory with a time limit. 
-  
-  Input Parameters: 
-  
-  + grid size
-  + time limit
 
-  Output in file:
-  
-  + time
-  + faults
-  + matches 
+## icons:
++ Location: /src/pictures
+
++ named icon 1 to icon x
+
++ format: .jpg
++ prefered site 100 - 256 px (depends on gui size -> config File)
   
