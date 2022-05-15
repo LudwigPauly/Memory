@@ -4,8 +4,8 @@ TIME_LIMIT=10
 # Grid <= 8 only even numbers
 GRID_SIZE=4
 
-# how long the cards shown after wrong move
+# how long the cards shown after wrong move in ms
 TIMER_DELAY=1000
 
-#GUI Size in px
+# GUI Size in px
 GUI_SIZE=800
